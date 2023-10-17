@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.midtermproject.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <argument
+            android:name="playerName"
+            app:argType="string" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_mainScreen_to_playGame"
+            app:destination="@id/playGame" />
+        <action
+            android:id="@+id/action_mainScreen_to_viewHighScores"
+            app:destination="@id/viewHighScores" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/playGame"
+        android:name="com.example.midtermproject.PlayGame"
+        android:label="fragment_play_game"
+        tools:layout="@layout/fragment_play_game">
+        <action
+            android:id="@+id/action_playGame_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/viewHighScores"
+        android:name="com.example.midtermproject.ViewHighScores"
+        android:label="fragment_view_high_scores"
+        tools:layout="@layout/fragment_view_high_scores" >
+        <action
+            android:id="@+id/action_viewHighScores_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+
+
+</navigation>

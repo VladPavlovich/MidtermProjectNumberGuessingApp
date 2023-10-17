@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+         android:orientation="vertical"
+       android:padding="10dp">
+       <TextView
+           android:id="@+id/recentScore"
+           android:layout_width="match_parent"
+           android:layout_height="115dp"
+           android:text=""
+           android:textSize="40dp" />
+
+
+       <TextView
+           android:id="@+id/welcomeTextView"
+           android:layout_width="match_parent"
+           android:layout_height="115dp"
+           android:text="Welcome to the game"
+           android:textSize="40dp" />
+
+       <Button
+           android:id="@+id/playGameButton"
+           android:layout_width="match_parent"
+           android:layout_height="230dp"
+           android:background="@drawable/buttonstyle"
+           android:layout_marginBottom="10dp"
+           android:text="Play Game" />
+
+       <Button
+           android:id="@+id/viewHighScoresButton"
+           android:layout_width="match_parent"
+           android:layout_height="230dp"
+           android:background="@drawable/buttonstyle"
+           android:text="View High Scores" />
+
+
+   </LinearLayout>
+
+</FrameLayout>
